@@ -15,8 +15,7 @@ pipeline {
                   sh 'tidy -q -e index.html'
               }
          }
-         
-         }         
+           
          stage('Upload to AWS') {
               steps {
                   withAWS(region:'ap-south-1',credentials:'aws-static') {
